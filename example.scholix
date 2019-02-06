@@ -1,0 +1,509 @@
+[
+	{
+		"LinkProvider": [
+			{
+				"Name": "Silvio Peroni",
+				"Identifier":[  
+					{  
+						"ID":"0000-0003-0530-4305",
+						"IDScheme":"orcid",
+						"IDURL":"https://orcid.org/0000-0003-0530-4305"
+					}
+				]
+			}
+		],
+		"LinkPublicationDate": "2019-02-06T11:09:34",
+		"LicenseURL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+		"RelationshipType": {
+			"Name": "References"
+		},
+		"Source": {
+			"PublicationDate": "2012-12",
+			"Identifier": {
+				"ID": "10.1016/j.websem.2012.08.001",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+		"Target": {
+			"PublicationDate": "2009-04-01",
+			"Identifier": {
+				"ID": "10.1087/2009202",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+	},
+	{
+		"LinkProvider": [
+			{
+				"Name": "Silvio Peroni",
+				"Identifier":[  
+					{  
+						"ID":"0000-0003-0530-4305",
+						"IDScheme":"orcid",
+						"IDURL":"https://orcid.org/0000-0003-0530-4305"
+					}
+				]
+			}
+		],
+		"LinkPublicationDate": "2019-02-06T11:09:34",
+		"LicenseURL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+		"RelationshipType": {
+			"Name": "References"
+		},
+		"Source": {
+			"PublicationDate": "2012-12",
+			"Identifier": {
+				"ID": "10.1016/j.websem.2012.08.001",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+		"Target": {
+			"PublicationDate": "2009-04-17",
+			"Identifier": {
+				"ID": "10.1371/journal.pcbi.1000361",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+	},
+	{
+		"LinkProvider": [
+			{
+				"Name": "Silvio Peroni",
+				"Identifier":[  
+					{  
+						"ID":"0000-0003-0530-4305",
+						"IDScheme":"orcid",
+						"IDURL":"https://orcid.org/0000-0003-0530-4305"
+					}
+				]
+			}
+		],
+		"LinkPublicationDate": "2019-02-06T11:09:34",
+		"LicenseURL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+		"RelationshipType": {
+			"Name": "References"
+		},
+		"Source": {
+			"PublicationDate": "2012-12",
+			"Identifier": {
+				"ID": "10.1016/j.websem.2012.08.001",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+		"Target": {
+			"PublicationDate": "2012",
+			"Identifier": {
+				"ID": "10.1007/978-3-642-33876-2_35",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+	},
+	{
+		"LinkProvider": [
+			{
+				"Name": "Silvio Peroni",
+				"Identifier":[  
+					{  
+						"ID":"0000-0003-0530-4305",
+						"IDScheme":"orcid",
+						"IDURL":"https://orcid.org/0000-0003-0530-4305"
+					}
+				]
+			}
+		],
+		"LinkPublicationDate": "2019-02-06T11:09:34",
+		"LicenseURL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+		"RelationshipType": {
+			"Name": "References"
+		},
+		"Source": {
+			"PublicationDate": "2012-12",
+			"Identifier": {
+				"ID": "10.1016/j.websem.2012.08.001",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+		"Target": {
+			"PublicationDate": "2010-06-22",
+			"Identifier": {
+				"ID": "10.1186/2041-1480-1-S1-S6",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+	},
+	{
+		"LinkProvider": [
+			{
+				"Name": "Silvio Peroni",
+				"Identifier":[  
+					{  
+						"ID":"0000-0003-0530-4305",
+						"IDScheme":"orcid",
+						"IDURL":"https://orcid.org/0000-0003-0530-4305"
+					}
+				]
+			}
+		],
+		"LinkPublicationDate": "2019-02-06T11:09:34",
+		"LicenseURL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+		"RelationshipType": {
+			"Name": "References"
+		},
+		"Source": {
+			"PublicationDate": "2012-12",
+			"Identifier": {
+				"ID": "10.1016/j.websem.2012.08.001",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+		"Target": {
+			"PublicationDate": "2003-10-23",
+			"Identifier": {
+				"ID": "10.1145/945645.945664",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+	},
+	{
+		"LinkProvider": [
+			{
+				"Name": "Silvio Peroni",
+				"Identifier":[  
+					{  
+						"ID":"0000-0003-0530-4305",
+						"IDScheme":"orcid",
+						"IDURL":"https://orcid.org/0000-0003-0530-4305"
+					}
+				]
+			}
+		],
+		"LinkPublicationDate": "2019-02-06T11:09:34",
+		"LicenseURL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+		"RelationshipType": {
+			"Name": "References"
+		},
+		"Source": {
+			"PublicationDate": "2012-12",
+			"Identifier": {
+				"ID": "10.1016/j.websem.2012.08.001",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+		"Target": {
+			"PublicationDate": "2005",
+			"Identifier": {
+				"ID": "10.1007/11595014_22",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+	},
+	{
+		"LinkProvider": [
+			{
+				"Name": "Silvio Peroni",
+				"Identifier":[  
+					{  
+						"ID":"0000-0003-0530-4305",
+						"IDScheme":"orcid",
+						"IDURL":"https://orcid.org/0000-0003-0530-4305"
+					}
+				]
+			}
+		],
+		"LinkPublicationDate": "2019-02-06T11:09:34",
+		"LicenseURL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+		"RelationshipType": {
+			"Name": "References"
+		},
+		"Source": {
+			"PublicationDate": "2012-12",
+			"Identifier": {
+				"ID": "10.1016/j.websem.2012.08.001",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+		"Target": {
+			"PublicationDate": "2008-10",
+			"Identifier": {
+				"ID": "10.1016/j.jbi.2008.04.010",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+	},
+	{
+		"LinkProvider": [
+			{
+				"Name": "Silvio Peroni",
+				"Identifier":[  
+					{  
+						"ID":"0000-0003-0530-4305",
+						"IDScheme":"orcid",
+						"IDURL":"https://orcid.org/0000-0003-0530-4305"
+					}
+				]
+			}
+		],
+		"LinkPublicationDate": "2019-02-06T11:09:34",
+		"LicenseURL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+		"RelationshipType": {
+			"Name": "References"
+		},
+		"Source": {
+			"PublicationDate": "2012-12",
+			"Identifier": {
+				"ID": "10.1016/j.websem.2012.08.001",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+		"Target": {
+			"PublicationDate": "2012-09-05",
+			"Identifier": {
+				"ID": "10.1145/2362499.2362502",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+	},
+	{
+		"LinkProvider": [
+			{
+				"Name": "Silvio Peroni",
+				"Identifier":[  
+					{  
+						"ID":"0000-0003-0530-4305",
+						"IDScheme":"orcid",
+						"IDURL":"https://orcid.org/0000-0003-0530-4305"
+					}
+				]
+			}
+		],
+		"LinkPublicationDate": "2019-02-06T11:09:34",
+		"LicenseURL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+		"RelationshipType": {
+			"Name": "References"
+		},
+		"Source": {
+			"PublicationDate": "2012-12",
+			"Identifier": {
+				"ID": "10.1016/j.websem.2012.08.001",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+		"Target": {
+			"PublicationDate": "2009-07-15",
+			"Identifier": {
+				"ID": "10.3115/1654595.1654612",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+	},
+	{
+		"LinkProvider": [
+			{
+				"Name": "Silvio Peroni",
+				"Identifier":[  
+					{  
+						"ID":"0000-0003-0530-4305",
+						"IDScheme":"orcid",
+						"IDURL":"https://orcid.org/0000-0003-0530-4305"
+					}
+				]
+			}
+		],
+		"LinkPublicationDate": "2019-02-06T11:09:34",
+		"LicenseURL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+		"RelationshipType": {
+			"Name": "References"
+		},
+		"Source": {
+			"PublicationDate": "2012-12",
+			"Identifier": {
+				"ID": "10.1016/j.websem.2012.08.001",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+		"Target": {
+			"PublicationDate": "2011",
+			"Identifier": {
+				"ID": "10.1007/978-3-642-22630-4_1",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+	},
+	{
+		"LinkProvider": [
+			{
+				"Name": "Silvio Peroni",
+				"Identifier":[  
+					{  
+						"ID":"0000-0003-0530-4305",
+						"IDScheme":"orcid",
+						"IDURL":"https://orcid.org/0000-0003-0530-4305"
+					}
+				]
+			}
+		],
+		"LinkPublicationDate": "2019-02-06T11:09:34",
+		"LicenseURL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+		"RelationshipType": {
+			"Name": "References"
+		},
+		"Source": {
+			"PublicationDate": "2012-12",
+			"Identifier": {
+				"ID": "10.1016/j.websem.2012.08.001",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+		"Target": {
+			"PublicationDate": "2013",
+			"Identifier": {
+				"ID": "10.3233/SW-2012-0073",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+	},
+	{
+		"LinkProvider": [
+			{
+				"Name": "Silvio Peroni",
+				"Identifier":[  
+					{  
+						"ID":"0000-0003-0530-4305",
+						"IDScheme":"orcid",
+						"IDURL":"https://orcid.org/0000-0003-0530-4305"
+					}
+				]
+			}
+		],
+		"LinkPublicationDate": "2019-02-06T11:09:34",
+		"LicenseURL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+		"RelationshipType": {
+			"Name": "References"
+		},
+		"Source": {
+			"PublicationDate": "2012-12",
+			"Identifier": {
+				"ID": "10.1016/j.websem.2012.08.001",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+		"Target": {
+			"PublicationDate": "2010-05-03",
+			"Identifier": {
+				"ID": "10.1109/MIS.2010.49",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+	},
+	{
+		"LinkProvider": [
+			{
+				"Name": "Silvio Peroni",
+				"Identifier":[  
+					{  
+						"ID":"0000-0003-0530-4305",
+						"IDScheme":"orcid",
+						"IDURL":"https://orcid.org/0000-0003-0530-4305"
+					}
+				]
+			}
+		],
+		"LinkPublicationDate": "2019-02-06T11:09:34",
+		"LicenseURL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+		"RelationshipType": {
+			"Name": "References"
+		},
+		"Source": {
+			"PublicationDate": "2012-12",
+			"Identifier": {
+				"ID": "10.1016/j.websem.2012.08.001",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+		"Target": {
+			"PublicationDate": "2014",
+			"Identifier": {
+				"ID": "10.3233/SW-130098",
+				"IDScheme": "doi"
+			},
+			"Type": {
+				"Name": "literature"
+			}
+		}
+	}
+]
