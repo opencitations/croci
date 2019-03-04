@@ -245,7 +245,6 @@ class CSVManager(object):
     @staticmethod
     def open_csv(fd_path, metadata=False, delimiter=","):
         result = []
-        meta = {}
 
         f_paths = set()
         if exists(fd_path):
@@ -259,13 +258,22 @@ class CSVManager(object):
                     f_paths.add(fd_path)
 
         for f_path in f_paths:
+            meta = {}
             with open(f_path) as f:
-                result.extend(DictReader(f, delimiter=delimiter))
-            if metadata:
-                with open(f_path.replace(".csv", ".json")) as f:
-                    meta = load(f)
+                cur_citations = list(DictReader(f, delimiter=delimiter))
+                if metadata:
+                    with open(f_path.replace(".csv", ".json")) as mf:
+                        meta = load(mf)
+                result.append((cur_citations, meta))
 
-        return result, meta
+        return result
+
+    @staticmethod
+    def list_citations(csv_result):
+        result = []
+        for citations, metadata in csv_result:
+            result.extend(citations)
+        return result
 
     @staticmethod
     def create_set_from_csv(csv_obj, key):
@@ -338,7 +346,7 @@ if __name__ == "__main__":
     args = arg_parser.parse_args()
 
     print("Retrieve new citation data")
-    exi_citations, exi_meta = CSVManager.open_csv(args.data)
+    exi_citations = CSVManager.list_citations(CSVManager.open_csv(args.data))
 
     print("Retrieve existing citation data")
     exi_ocis = CSVManager.create_set_from_csv(exi_citations, "oci")
@@ -371,49 +379,50 @@ if __name__ == "__main__":
                 print("\nProcessing files in '%s'" % f)
             else:
                 print("\nProcessing file '%s'" % f)
-            new_citations, new_meta = CSVManager.open_csv(f, metadata=True)
-            all_citations += len(new_citations)
-            for new_citation in new_citations:
-                citing_doi, cited_doi = \
-                    doim.normalize(new_citation["citing_id"]), doim.normalize(new_citation["cited_id"])
-                if citing_doi and cited_doi:
-                    oci = ocim.get_oci(citing_doi, cited_doi, "050").replace("oci:", "")
-                    if oci not in exi_ocis:
-                        exi_ocis.add(oci)
-                        if doim.is_valid(citing_doi) and doim.is_valid(cited_doi):
-                            print("Create citation data for 'oci:%s' between DOI '%s' and DOI '%s', from '%s'" %
-                                  (oci, citing_doi, cited_doi, new_meta["source"]))
-                            citing_pub_date, cited_pub_date = \
-                                get_date(citing_doi, new_citation["citing_publication_date"], [cm, dm]), \
-                                get_date(cited_doi, new_citation["cited_publication_date"], [cm, dm])
-                            cit = Citation(oci,
-                                           BASE_URL + quote(citing_doi), citing_pub_date,
-                                           BASE_URL + quote(cited_doi), cited_pub_date,
-                                           None, None,
-                                           new_meta["agent"], new_meta["source"], cur_time,
-                                           "CROCI", "doi", BASE_URL + "([[XXX__decode]])", "reference",
-                                           cm.share_issn(citing_doi, cited_doi),
-                                           om.share_orcid(citing_doi, cited_doi))
+            all_new_citations = CSVManager.open_csv(f, metadata=True)
+            for new_citations, new_meta in all_new_citations:
+                all_citations += len(new_citations)
+                for new_citation in new_citations:
+                    citing_doi, cited_doi = \
+                        doim.normalize(new_citation["citing_id"]), doim.normalize(new_citation["cited_id"])
+                    if citing_doi and cited_doi:
+                        oci = ocim.get_oci(citing_doi, cited_doi, "050").replace("oci:", "")
+                        if oci not in exi_ocis:
+                            exi_ocis.add(oci)
+                            if doim.is_valid(citing_doi) and doim.is_valid(cited_doi):
+                                print("Create citation data for 'oci:%s' between DOI '%s' and DOI '%s', from '%s'" %
+                                      (oci, citing_doi, cited_doi, new_meta["source"]))
+                                citing_pub_date, cited_pub_date = \
+                                    get_date(citing_doi, new_citation["citing_publication_date"], [cm, dm]), \
+                                    get_date(cited_doi, new_citation["cited_publication_date"], [cm, dm])
+                                cit = Citation(oci,
+                                               BASE_URL + quote(citing_doi), citing_pub_date,
+                                               BASE_URL + quote(cited_doi), cited_pub_date,
+                                               None, None,
+                                               new_meta["agent"], new_meta["source"], cur_time,
+                                               "CROCI", "doi", BASE_URL + "([[XXX__decode]])", "reference",
+                                               cm.share_issn(citing_doi, cited_doi),
+                                               om.share_orcid(citing_doi, cited_doi))
 
-                            # Store in CSV and RDF
-                            cit_json = loads(cit.get_citation_json())
-                            cit_rdf = cit.get_citation_rdf(CROCI_BASE, False, False, False)
-                            cit_json_prov = loads(cit.get_citation_json_prov())
-                            cit_rdf_prov = cit.get_citation_prov_rdf(CROCI_BASE)
-                            CSVManager.store_row(args.data, cur_time, cit_json, cit_rdf)
-                            CSVManager.store_row(args.data, cur_time, cit_json_prov, cit_rdf_prov, True)
-                            new_citations_added += 1
+                                # Store in CSV and RDF
+                                cit_json = loads(cit.get_citation_json())
+                                cit_rdf = cit.get_citation_rdf(CROCI_BASE, False, False, False)
+                                cit_json_prov = loads(cit.get_citation_json_prov())
+                                cit_rdf_prov = cit.get_citation_prov_rdf(CROCI_BASE)
+                                CSVManager.store_row(args.data, cur_time, cit_json, cit_rdf)
+                                CSVManager.store_row(args.data, cur_time, cit_json_prov, cit_rdf_prov, True)
+                                new_citations_added += 1
+                            else:
+                                print("WARNING: some DOIs, among '%s' and '%s', do not exist" % (citing_doi, cited_doi))
+                                error_in_dois_existence += 1
                         else:
-                            print("WARNING: some DOIs, among '%s' and '%s', do not exist" % (citing_doi, cited_doi))
-                            error_in_dois_existence += 1
+                            print("WARNING: the citation between DOI '%s' and DOI '%s' has been already processed" %
+                                  (citing_doi, cited_doi))
+                            citations_already_present += 1
                     else:
-                        print("WARNING: the citation between DOI '%s' and DOI '%s' has been already processed" %
+                        print("WARNING: some DOIs, among '%s' and '%s', is syntactically incorrect" %
                               (citing_doi, cited_doi))
-                        citations_already_present += 1
-                else:
-                    print("WARNING: some DOIs, among '%s' and '%s', is syntactically incorrect" %
-                          (citing_doi, cited_doi))
-                    error_in_dois_syntax += 1
+                        error_in_dois_syntax += 1
         except Exception as e:
             print(e.message)
 
