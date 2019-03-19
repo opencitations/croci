@@ -1,6 +1,6 @@
 # CROCI, the Crowdsourced Open Citations Index
 
-[CROCI, the Crowdsourced Open Citations Index](http://oprncitations.net/index/croci), is a new OpenCitations Index containing citations deposited by individuals, identified by ORCiD identifiers, who have a legal right to publish them under a CC0 public domain waiver. A detailed description of the motivation behind the creation of this new OpenCitations Index are available in our blog post entitled ["Crowdsourcing open citations with CROCI"](https://opencitations.wordpress.com/2019/02/07/crowdsourcing-open-citations-with-croci/).
+[CROCI, the Crowdsourced Open Citations Index](http://opencitations.net/index/croci), is a new OpenCitations Index containing citations deposited by individuals, identified by ORCiD identifiers, who have a legal right to publish them under a CC0 public domain waiver. A detailed description of the motivation behind the creation of this new OpenCitations Index are available in our blog post entitled ["Crowdsourcing open citations with CROCI"](https://opencitations.wordpress.com/2019/02/07/crowdsourcing-open-citations-with-croci/).
 
 ## How to contribute
 
